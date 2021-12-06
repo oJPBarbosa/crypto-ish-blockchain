@@ -7,7 +7,7 @@ export default class Block {
   constructor(
     public previousHash: string,
     public transaction: Transaction,
-    public timestamp: number = Date.now()
+    public timestamp: string = Date()
   ) {}
 
   get hash(): string {
