@@ -15,6 +15,7 @@
 ## 🎯 About
 
 A TypeScript cryptocurrency-ish blockchain inspired by [Fireship's blockchain video](https://www.youtube.com/watch?v=qF7dkrce-mQ).
+<img alt="Crypto-ish Blockchain" src="https://user-images.githubusercontent.com/79005271/144902094-e91f2ca1-5a8c-460d-b16a-1c3bf93e332c.png">
 
 ## 🙋 How to use
 
