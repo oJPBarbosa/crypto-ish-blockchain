@@ -10,6 +10,9 @@
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/oJPBarbosa/crypto-ish-blockchain.svg">
   </a>
   <img alt="GitHub" src="https://img.shields.io/github/license/oJPBarbosa/crypto-ish-blockchain.svg">
+  <a href="https://www.codacy.com/gh/oJPBarbosa/crypto-ish-blockchain/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=oJPBarbosa/crypto-ish-blockchain&amp;utm_campaign=Badge_Grade">
+    <img alt="Codacy Badge" href="https://app.codacy.com/project/badge/Grade/08d5698170e340c7b39d1b88bdba24d1">
+  </a>
 </p>
 
 ## 🎯 About
