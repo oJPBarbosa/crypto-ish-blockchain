@@ -3,9 +3,8 @@ import Block from './Block';
 import Transaction from './Transaction';
 
 export default class Chain {
-  public static instance = new Chain();
-
-  chain: Block[];
+  public static instance: Chain = new Chain();
+  public chain: Block[];
 
   constructor() {
     this.chain = [new Block('', new Transaction(0, '', ''))];
@@ -16,20 +15,20 @@ export default class Chain {
   }
 
   mine(nonce: number): void {
-    console.log('⛏️  Mining...');
+    console.log('⛏️  Mining...\n');
 
     let solution = 0;
     let mining = true;
     while (mining) {
-      const hash = crypto.createHash('sha256');
+      const hash: crypto.Hash = crypto.createHash('sha256');
       hash.update((nonce + solution).toString());
 
-      const attempt = hash.digest('hex');
+      const attempt: string = hash.digest('hex');
       console.log('🔗', attempt);
 
-      if (attempt.startsWith('00000')) {
+      if (attempt.startsWith('0000')) {
         console.log(
-          `\n🎉 Mined!\n\tAttempt: ${attempt}\n\tSolution: ${solution + 1}\n`
+          `\n🎉 Mined!\n\tSolution: ${attempt}\n\tAttempt: ${solution + 1}\n`
         );
         mining = false;
       }
@@ -43,13 +42,12 @@ export default class Chain {
     senderPublicKey: string,
     signature: Buffer
   ): void {
-    const verifier = crypto.createVerify('sha256');
+    const verifier: crypto.Verify = crypto.createVerify('sha256');
     verifier.update(transaction.toString());
 
-    const isValid = verifier.verify(senderPublicKey, signature);
-
+    const isValid: boolean = verifier.verify(senderPublicKey, signature);
     if (isValid) {
-      const block = new Block(this.lastBlock.hash, transaction);
+      const block: Block = new Block(this.lastBlock.hash, transaction);
       this.mine(block.nonce);
       this.chain.push(block);
     }

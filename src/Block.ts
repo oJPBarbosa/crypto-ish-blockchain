@@ -11,7 +11,7 @@ export default class Block {
   ) {}
 
   get hash(): string {
-    const hash = crypto.createHash('sha256');
+    const hash: crypto.Hash = crypto.createHash('sha256');
     hash.update(this.toString());
 
     return hash.digest('hex');
