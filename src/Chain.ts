@@ -26,14 +26,14 @@ export default class Chain {
       const attempt: string = hash.digest('hex');
       console.log('🔗', attempt);
 
+      solution++;
+
       if (attempt.startsWith('0000')) {
         console.log(
-          `\n🎉 Mined!\n\tSolution: ${attempt}\n\tAttempt: ${solution + 1}\n`
+          `\n🎉 Mined!\n\tSolution: ${attempt}\n\tAttempt: ${solution}\n`
         );
         mining = false;
       }
-
-      solution++;
     }
   }
 
