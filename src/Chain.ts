@@ -17,8 +17,8 @@ export default class Chain {
   mine(nonce: number): void {
     console.log('⛏️  Mining...\n');
 
-    let solution = 0;
-    let mining = true;
+    let solution: number = 0;
+    let mining: boolean = true;
     while (mining) {
       const hash: crypto.Hash = crypto.createHash('sha256');
       hash.update((nonce + solution).toString());
